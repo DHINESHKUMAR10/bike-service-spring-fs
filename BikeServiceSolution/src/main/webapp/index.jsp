@@ -171,7 +171,7 @@ p {
 
         </form>
 
-        <p>Not a member? <a href="http://localhost:8080/BikeServiceApplication/newuser">Sign up now</a><span class="fontawesome-arrow-right"></span></p>
+        <p>Not a member? <a href="http://localhost:8080/BikeServiceSolution/newuser">Sign up now</a><span class="fontawesome-arrow-right"></span></p>
         
         <!--<form action="newuser" method="post"><p><input type="submit" value="Sign up now In"></p></form>-->
 
