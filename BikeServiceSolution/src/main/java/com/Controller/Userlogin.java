@@ -36,10 +36,11 @@ public class Userlogin {
 	
 	@RequestMapping("/checkuser")
 	public String checkuser(HttpServletRequest request,Model model) throws ClassNotFoundException, SQLException {
-		if(request.getParameter("mail").equals(wmail) && request.getParameter("password").equals(wpass)) {
+		System.out.println(wmail+" "+wpass+"---"+request.getParameter("email")+" "+request.getParameter("password"));
+		if(request.getParameter("email").equals(wmail) && request.getParameter("password").equals(wpass)) {
 			return "owner_page";
 		}else {
-			String mail_get = request.getParameter("mail");
+			String mail_get = request.getParameter("email");
 			String pass_get = request.getParameter("password");
 			
 			// load the driver
@@ -49,11 +50,11 @@ public class Userlogin {
 			Connection con = (Connection) DriverManager.getConnection(url,user_name,pass);
 			Statement st = (Statement) con.createStatement();
 			
-			ResultSet rs = st.executeQuery("select * from user");
-			
+			ResultSet rs = st.executeQuery("select * from users_details");
+			System.out.println("testdsggds");
 			while(rs.next()) {
-				String mail = rs.getString(1);
-				String pass = rs.getString(3);
+				String mail = rs.getString(3);
+				String pass = rs.getString(2);
 				if(mail.equals(mail_get) && pass.equals(pass_get)) {
 					model.addAttribute("email",mail);
 					//model.addAttribute("Dno",rs.getString(1));

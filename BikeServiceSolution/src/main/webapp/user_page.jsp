@@ -15,11 +15,11 @@
 button {
   width: 150px;
   height: 50px;
-  background: linear-gradient(to bottom, #4eb5e5 0%,#389ed5 100%); /* W3C */
+  background: linear-gradient(to bottom, #000480 0%,#adadad 100%); /* W3C */
   border: none;
   border-radius: 5px;
   position: relative;
-  border-bottom: 4px solid #2b8bc6;
+  border-bottom: 4px solid #000480;
   color: #fbfbfb;
   font-weight: 600;
   font-family: 'Open Sans', sans-serif;
@@ -61,7 +61,7 @@ button:after {
 /* Presentation stuff */
 .holder {
   width: 400px;
-  background: #efefef;
+  background: #adadad;
   padding: 30px 10px;
   box-sizing: border-box;
   margin: 0 auto;
@@ -73,7 +73,7 @@ button:after {
 h1 {
   font: 400 16px 'Open Sans';
   text-transform: uppercase;
-  color: #999;
+  color: #f3f4f5;
   text-shadow: 1px 1px 1px #fff;
   margin-bottom: 30px;
 } 
@@ -89,21 +89,7 @@ body {
 </head>
 <body>
 <body>
-	<!--   
-		/*response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP1.1
-		
-		response.setHeader("Pragma", "no-cache"); // HTTP1.0
-		
-		response.setHeader("Expires", "0"); // proxiservers
-		
-		if(session.getAttribute("username")==null)
-			response.sendRedirect("index.jsp");*/
-	%> -->
-	
-	<%
-	//request.setAttribute("email",request.getAttribute("email")); 
-	//String mail = (String)request.getAttribute("email");
-	%>  <!-- you can access the model attributes directly which is comes from the controller -->
+  
 	<div class="holder" align="center">
   
   		<h1>User Option's</h1>
